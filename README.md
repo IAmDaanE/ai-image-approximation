@@ -1,6 +1,6 @@
 # AI Image Approximation
 
-Train a neural network to learn and reproduce any image you give it.
+Train a neural network to learn and reproduce any image you give it. Not really a problem that had to be solved but perfect to learn how neural networks learn and to visualize the entire process.
 
 ---
 
