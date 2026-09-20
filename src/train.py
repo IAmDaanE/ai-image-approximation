@@ -1,4 +1,4 @@
-import nnlib_py as nn 
+import barebones_ml as bbml 
 import numpy as np
 from utils import get_image, visualize_image, index_to_coord
 import pygame
@@ -25,17 +25,18 @@ def run_training(image_path, epochs, start_lr):
             input_array[idx] = features
 
     hidden_size = 256
-    network = nn.Network(nn.Losses.mse)
-    network.add(nn.Layer(input_dim, hidden_size, nn.Activations().tanh, nn.WeightInitializers.xavier))
-    network.add(nn.Layer(hidden_size, hidden_size, nn.Activations().tanh, nn.WeightInitializers.xavier))
-    network.add(nn.Layer(hidden_size, hidden_size, nn.Activations().tanh, nn.WeightInitializers.xavier))
-    network.add(nn.Layer(hidden_size, hidden_size, nn.Activations().tanh, nn.WeightInitializers.xavier))
-    network.add(nn.Layer(hidden_size, 1, nn.Activations().sigmoid, nn.WeightInitializers.xavier))
+
+    network = bbml.Network(bbml.Losses.mse)
+    network.add(bbml.Layer(input_dim, hidden_size, bbml.Activations().tanh, bbml.WeightInitializers.xavier))
+    network.add(bbml.Layer(hidden_size, hidden_size, bbml.Activations().tanh, bbml.WeightInitializers.xavier))
+    network.add(bbml.Layer(hidden_size, hidden_size, bbml.Activations().tanh, bbml.WeightInitializers.xavier))
+    network.add(bbml.Layer(hidden_size, hidden_size, bbml.Activations().tanh, bbml.WeightInitializers.xavier))
+    network.add(bbml.Layer(hidden_size, 1, bbml.Activations().sigmoid, bbml.WeightInitializers.xavier))
 
     correct_image_pixels_flat = correct_image_pixels.reshape(-1, 1)
     pygame.init()
     screen = pygame.display.set_mode((image_width * scale, image_height * scale))
-    pygame.display.set_caption("AI Image Reproducer")
+    pygame.display.set_caption("AI Image Approximation")
 
     prediction_array = np.empty((image_width, image_height))
 
