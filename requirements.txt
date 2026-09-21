@@ -1,4 +1,4 @@
-git+https://github.com/IAmDaanE/neural-network-library.git@master
-pygame
+git+https://github.com/IAmDaanE/bare-bones-ml.git@master
 Pillow
+pygame
 numpy
