@@ -12,7 +12,7 @@ Train a neural network to learn and reproduce any image you give it. Not really 
 
 ## About the Project
 
-This was written in python using [my very own machine learning library](https://github.com/IAmDaanE/bare-bones-ml). The input to the neural network is the coordinate of the pixel on the image, the output is its approximation of the greyscale value of that pixel.
+This was written in python using my very own [barebones_ml](https://github.com/IAmDaanE/bare-bones-ml) machine learning library. The input to the neural network is the coordinate of the pixel on the image, the output is its approximation of the greyscale value of that pixel.
 
 ## Getting Started
 
