@@ -16,27 +16,16 @@ This was written in python using [my very own neural network library](https://gi
 
 ## Getting Started
 
-### Getting the Source
+**Requires:** Python 3.10 - 3.14
+1. Install the required libraries, preferably in a venv.
 
-This project is [hosted on GitHub](https://github.com/IAmDaanE/ai-image-approximation). You can download the zip or clone this project directly using this command:
-
-```
-git clone git@github.com:IAmDaanE/ai-image-approximation.git
-```
-
-### Running the Program
-
-Requirements: You must have Python 3.9 - 3.13.
-1. Clone the repository or download the zip and unpack it to your directory of choice.
-2. Navigate to that directory in a terminal.
-3. In a venv or the global python version install the needed libraries.
     ```
     pip install -r requirements.txt
     ```
-4. Run the program.
+2. Run the program, replace the string with the path to the image you want to train on.
 
     ```
-    python src/train.py "images/hello_world.png" 
+    python src/train.py "../images/hello_world.png"
     ```
 
 ## License
